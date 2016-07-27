@@ -63,7 +63,7 @@
       #['LINK_TEXT', 'LINK_URL', 'LINK_CLASS', 'ADDITIONAL_ATTRIBUTES']
       ['OU Website', 'http://www.open.ac.uk/', '', ''],
       ['StudentHome', 'https://msds.open.ac.uk/students/index.aspx', '', 'target="_blank"'],
-      ['About us', reverse('about'), '', '']
+      ['About us', reverse('root'), '', '']
     ]
   %>
 </%def>
@@ -91,7 +91,7 @@
       ['StudentHome', 'https://msds.open.ac.uk/students/index.aspx', '', 'target="_blank"'],
       ['Help', reverse('help'), '', ''],
       ['FAQ', marketing_link('FAQ'), '', ''],
-      ['Contact', reverse('contact'), '', ''],
+      ['Contact', reverse('root'), '', ''],
       ['Conditions of Use', reverse('tos'), '', ''],
       ['Copyright', marketing_link('copyright'), '', '']
     ]
