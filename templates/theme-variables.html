@@ -33,11 +33,11 @@
 <%def name="get_brand_logos()">
   <%
   return {
-    'logo_positive' : '/images/branding/brand-logo.svg', ## required
-    'logo_negative' : '/images/branding/brand-logo-negative.svg', ## required
-    'icon_color' : '/images/branding/icon-color.svg', ## required
-    'icon_white' : '/images/branding/icon-white.svg', ## required
-    'icon_black' : '/images/branding/icon-black.svg', ## required
+    'logo_positive' : '/images/branding/brainstory-logo.svg', ## required
+    'logo_negative' : '/images/branding/brainstory-logo-negative.svg', ## required
+    'icon_color' : '/images/branding/brainstory-icon-color.svg', ## required
+    'icon_white' : '/images/branding/brainstory-icon-white.svg', ## required
+    'icon_black' : '/images/branding/brainstory-icon-black.svg', ## required
   }
   %>
 </%def>
@@ -61,8 +61,6 @@
   <%
     return [
       #['LINK_TEXT', 'LINK_URL', 'LINK_CLASS', 'ADDITIONAL_ATTRIBUTES']
-      ['Menu item 1', '#', '', ''],
-      ['Menu item 2', '#', '', '']
     ]
   %>
 </%def>
@@ -74,7 +72,6 @@
   <%
     return [
       #['LINK_TEXT', 'LINK_URL', 'LINK_CLASS', 'ADDITIONAL_ATTRIBUTES']
-      ['Menu item 1', '#', '', '']
     ]
   %>
 </%def>
@@ -86,12 +83,7 @@
   <%
     return [
       #['LINK_TEXT', 'LINK_URL', 'LINK_CLASS', 'ADDITIONAL_ATTRIBUTES']
-      ['Example item', '#', '', 'target="_blank"'],
-      ['Help', reverse('help'), '', ''],
-      ['FAQ', marketing_link('FAQ'), '', ''],
-      ['Contact', reverse('contact'), '', ''],
-      ['Conditions of Use', reverse('tos'), '', ''],
-      ['Copyright', marketing_link('copyright'), '', '']
+      ['Contact Us', 'http://www.albertafamilywellness.org/contact-us', '', 'target="_blank"'],
     ]
   %>
 </%def>
@@ -103,7 +95,7 @@
   <%
     return {
       'footer_logo' : get_brand_logos()['icon_black'], ## leave as is, defined above. Can be changed to something custom if needed.
-      'footer_copyright_text' : '© 2016 Palix Foundation (formerly the Norlien Foundation). All rights reserved.',  ## leave value empty if you don't want it displayed.
+      'footer_copyright_text' : '© 2016 Palix Foundation. All rights reserved.',  ## leave value empty if you don't want it displayed.
       'display_edx_disclaimer' : True, ## bool value required
       'edx_disclaimer' : 'edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc.', ## leave value empty if you don't want it displayed.
       'display_poweredby' : True, ## bool value required
@@ -131,11 +123,11 @@
           'static-block', '../customer_specific/_palix-hero.html', {
             # template settings
             'hero_title' : "Brain story certification", ## leave value empty if you don't want it displayed.
-            'hero_subtitle' : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.", ## leave value empty if you don't want it displayed.
+            'hero_subtitle' : "Learn from leading experts about the science and significance of early experiences and their impact on lifelong health.", ## leave value empty if you don't want it displayed.
             'cta_link' : "", ## leave value empty if you don't want a CTA button displayed.
             'cta_link_text' : "", ## leave value empty if you don't want a CTA button displayed.
-            'popup_video_url' : "r5YdS_ZjXnc", ## YouTube video ID - leave value empty if you don't want a video button and modal displayed.
-            'popup_video_text' : "Watch our video", ## leave value empty if you don't want a video button and modal displayed.
+            'popup_video_url' : "", ## YouTube video ID - leave value empty if you don't want a video button and modal displayed.
+            'popup_video_text' : "", ## leave value empty if you don't want a video button and modal displayed.
             'popup_video_id' : "HeroVideo", ## leave value empty if you don't want a video button and modal displayed.
             'text_color' : "#fff",
             'bg_image_url' : '/static/themes/palix-dogwood/images/LMS_AFWI_Hero.jpg', ## leave empty if you want just a full color background
@@ -143,42 +135,17 @@
           }
         ],
         [
-          'static-block', 'static-blocks/_heading-plus-text-plus-cta.html', {
-            # template settings
-            'heading' : "Heading for an additional text block", ## leave value empty if you don't want it displayed.
-            'text' : "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>", ## leave value empty if you don't want it displayed.
-            'cta_link' : "#", ## leave value empty if you don't want a CTA button displayed.
-            'cta_link_text' : "CTA Button", ## leave value empty if you don't want a CTA button displayed.
-            'optional_classes' : "centered", ## can be "centered" to have all text centered, or "negative" if you want white text on solid color background
-            'extra_css' : "" ## add custom css to be added inline to the wrapper element
-          }
-        ],
-        [
-          'static-block', 'static-blocks/_line-separator.html', {
-            # template settings
-            'optional_classes' : "", ## if none line will have height of 0.1rem (1px by default), can be set to "2px", "5px" or "8px"
-            'extra_css' : "" ## add custom css to be added inline to the wrapper element
-          }
-        ],
-        [
-          'courses-list', 'live-blocks/course-listing/_course-listing-01.html', {
-            # template settings
-            'max_courses' : 4, ## required, sets max number of courses to be displayed in the block
-            'course_template_class' : 'a--course-tile-03', ## required, defined as "a--{template-name}"
-            'course_template' : '../../customer_specific/_course-tile-palix.html', ## required
-            'section_heading' : "Our latest courses:", ## leave value empty if you don't want it displayed.
-            'section_text' : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.", ## leave value empty if you don't want it displayed.
-            'optional_classes' : "centered", ## can be "centered" to have all text centered
-            'extra_css' : "" ## add custom css to be added inline to the wrapper element
+          'static-block', '../customer_specific/_palix-index-what-learn.html', {
+
           }
         ],
         [
           'static-block', 'static-blocks/_heading-plus-text-plus-cta.html', {
             # template settings
-            'heading' : "Additional text block headline", ## leave value empty if you don't want it displayed.
-            'text' : "<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>", ## leave value empty if you don't want it displayed.
-            'cta_link' : "#", ## leave value empty if you don't want a CTA button displayed.
-            'cta_link_text' : "CTA Button", ## leave value empty if you don't want a CTA button displayed.
+            'heading' : "What is the Brain Story?", ## leave value empty if you don't want it displayed.
+            'text' : '<p>To address this gap between science and public understanding, scientists from the National Scientific Council on the Developing Child and the Harvard Center on the Developing Child collaborated with strategic communications experts at the FrameWorks Institute to craft a scientific narrative called "The Core Story of Child Development". The Brain Story builds upon the Core Story of Brain Development to also incorporate science about adolescent and adult health outcomes. Many of the experts who crafted the Core Story and whose expertise is integrated into the Brain Story are members of the faculty for this course. A short, illustrated version of the Brain Story is available at AlbertaFamilyWellness.org.</p>', ## leave value empty if you don't want it displayed.
+            'cta_link' : "http://www.albertafamilywellness.org/what-we-know/the-brain-story/", ## leave value empty if you don't want a CTA button displayed.
+            'cta_link_text' : "Read the Brain Story", ## leave value empty if you don't want a CTA button displayed.
             'optional_classes' : "negative", ## can be "centered" to have all text centered, or "negative" if you want white text on solid color background
             'extra_css' : "" ## add custom css to be added inline to the wrapper element
           }
@@ -217,10 +184,10 @@
         [
           'static-block', 'static-blocks/_heading-plus-text-plus-cta.html', {
             # template settings
-            'heading' : "Optional content title", ## leave value empty if you don't want it displayed.
-            'text' : "<p>You can add some additional content here. You can add a CTA under this section as well.</p><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>", ## leave value empty if you don't want it displayed.
-            'cta_link' : "#", ## leave value empty if you don't want a CTA button displayed.
-            'cta_link_text' : "CTA button", ## leave value empty if you don't want a CTA button displayed.
+            'heading' : "About the Course Creators", ## leave value empty if you don't want it displayed.
+            'text' : "<p>This course was created by the Alberta Family Wellness Initiative, a not-for-profit organization that facilitates research into early brain development, and addiction and mental health treatment; and applies this research to policies and practices that support positive lifelong health outcomes.</p>", ## leave value empty if you don't want it displayed.
+            'cta_link' : "http://wwww.albertafamilywellness.org", ## leave value empty if you don't want a CTA button displayed.
+            'cta_link_text' : "Learn More", ## leave value empty if you don't want a CTA button displayed.
             'optional_classes' : "negative", ## can be "centered" to have all text centered, or "negative" if you want white text on solid color background
             'extra_css' : "" ## add custom css to be added inline to the wrapper element
           }
