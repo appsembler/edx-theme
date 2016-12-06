@@ -3696,7 +3696,7 @@ span.a--underlined {
     font-style: normal;
     font-weight: 400;
     color: #fff;
-    border-radius: 0.5rem;
+    border-radius: 0;
     position: relative; }
     .a--bottom-slideout-modal__control-button:hover, .a--bottom-slideout-modal__control-button:focus, .a--bottom-slideout-modal__control-button:hover:not(:disabled), .a--bottom-slideout-modal__control-button:focus:not(:disabled) {
       border: none;
@@ -3706,7 +3706,7 @@ span.a--underlined {
       outline: none !important; }
     .a--bottom-slideout-modal__control-button:before {
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: 0;
       top: 0;
       bottom: 0;
       left: 0;
@@ -3721,9 +3721,9 @@ span.a--underlined {
     .a--bottom-slideout-modal__control-button:hover, .a--bottom-slideout-modal__control-button:focus, .a--bottom-slideout-modal__control-button:hover:not(:disabled), .a--bottom-slideout-modal__control-button:focus:not(:disabled) {
       color: rgba(255, 255, 255, 0.8); }
     .a--bottom-slideout-modal__control-button.action {
-      background-color: #EC8500; }
+      background-color: #00A0E4; }
       .a--bottom-slideout-modal__control-button.action:hover, .a--bottom-slideout-modal__control-button.action:focus, .a--bottom-slideout-modal__control-button.action:hover:not(:disabled), .a--bottom-slideout-modal__control-button.action:focus:not(:disabled) {
-        background-color: #EC8500; }
+        background-color: #00A0E4; }
     .a--bottom-slideout-modal__control-button.dismiss {
       border: 0.2rem solid rgba(44, 42, 47, 0.8) !important;
       color: rgba(44, 42, 47, 0.8);
@@ -3756,7 +3756,7 @@ span.a--underlined {
   text-shadow: none;
   background-color: #ddd;
   border: 0.1rem solid #ccc;
-  border-radius: 0.5rem; }
+  border-radius: 0; }
   #sga-content .upload button:hover, #sga-content .upload button:focus {
     background-color: #ccc; }
 
@@ -3769,7 +3769,7 @@ span.a--underlined {
   margin-left: auto; }
 
 a.new-post-btn {
-  border-radius: 0.5rem;
+  border-radius: 0;
   border: 0.1rem solid #0072A4;
   padding: 1rem 1.5rem;
   -webkit-transition: all 0.3s ease-in-out;
@@ -3783,7 +3783,7 @@ a.new-post-btn {
 .xmodule_display.xmodule_CapaModule div.problem .action .save, .xmodule_display.xmodule_CapaModule div.problem .action .check, .xmodule_display.xmodule_CapaModule div.problem .action .show, .xmodule_display.xmodule_CapaModule div.problem .action .reset, .xmodule_display.xmodule_CapaModule div.problem .action .hint-button, .course-content .xmodule_display button {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border-radius: 0.5rem;
+  border-radius: 0;
   height: auto;
   padding: 1rem 1.5rem;
   margin: 0 1rem 1rem 0;
@@ -3801,7 +3801,7 @@ a.new-post-btn {
 .course-content .light-button:hover:not(:disabled), .course-content div.history-controls input[type="submit"]:hover:not(:disabled), .course-content a.light-button:hover:not(:disabled), .course-content div.info-wrapper section.handouts ol li div.hitarea:hover + h4.light-button:not(:disabled), .course-content div.info-wrapper section.handouts ol li div.hitarea:focus + h4.light-button:not(:disabled), .course-content .gray-button:hover:not(:disabled), .course-content input[type="reset"]:hover:not(:disabled), .course-content input[type="submit"]:hover:not(:disabled), .course-content input[type="button"]:hover:not(:disabled), .course-content button:hover:not(:disabled), .course-content .button:hover:not(:disabled), .course-content .xmodule_display.xmodule_LTIModule div.lti .wrapper-lti-link .lti-link .link_lti_new_window:hover:not(:disabled) {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border-radius: 0.5rem;
+  border-radius: 0;
   height: auto;
   padding: 1rem 1.5rem;
   margin: 0 1rem 1rem 0;
@@ -4150,11 +4150,11 @@ a.new-post-btn {
       .a--header-design-01 .a--site-menu__group ul li a:hover, .a--header-design-01 .a--site-menu__group ul li a:focus {
         color: #5e5a65; }
       .a--header-design-01 .a--site-menu__group ul li a:after {
-        background-color: #0072A4; }
+        background-color: #EC8500; }
     .a--header-design-01 .a--site-menu__group ul li.a--active a {
       color: #0C6B8C; }
     .a--header-design-01 .a--site-menu__group ul li.a--nav-cta a {
-      background-color: #EC8500;
+      background-color: #00A0E4;
       border: none;
       display: inline-block;
       padding: 1.5rem 2rem;
@@ -4162,11 +4162,11 @@ a.new-post-btn {
       font-style: normal;
       font-weight: 400;
       color: #fff;
-      border-radius: 0.5rem;
+      border-radius: 0;
       position: relative; }
       .a--header-design-01 .a--site-menu__group ul li.a--nav-cta a:before {
         position: absolute;
-        border-radius: 0.5rem;
+        border-radius: 0;
         top: 0;
         bottom: 0;
         left: 0;
@@ -4608,11 +4608,11 @@ a.new-post-btn {
       .a--header-design-02 .a--site-menu__group ul li a:hover:after, .a--header-design-02 .a--site-menu__group ul li a:focus:after {
         width: 100%; }
       .a--header-design-02 .a--site-menu__group ul li a:after {
-        background-color: #0072A4; }
+        background-color: #EC8500; }
     .a--header-design-02 .a--site-menu__group ul li.a--active a {
       color: #0C6B8C; }
     .a--header-design-02 .a--site-menu__group ul li.a--nav-cta a {
-      background-color: #EC8500;
+      background-color: #00A0E4;
       border: none;
       display: inline-block;
       padding: 1.5rem 2rem;
@@ -4620,11 +4620,11 @@ a.new-post-btn {
       font-style: normal;
       font-weight: 400;
       color: #fff;
-      border-radius: 0.5rem;
+      border-radius: 0;
       position: relative; }
       .a--header-design-02 .a--site-menu__group ul li.a--nav-cta a:before {
         position: absolute;
-        border-radius: 0.5rem;
+        border-radius: 0;
         top: 0;
         bottom: 0;
         left: 0;
@@ -4964,7 +4964,7 @@ a.new-post-btn {
       font-family: "Open Sans", sans-serif;
       font-style: normal;
       font-weight: 400;
-      background-color: #EC8500;
+      background-color: #00A0E4;
       border: none;
       display: inline-block;
       padding: 1.5rem 2rem;
@@ -4974,11 +4974,11 @@ a.new-post-btn {
       font-style: normal;
       font-weight: 400;
       color: #fff;
-      border-radius: 0.5rem;
+      border-radius: 0;
       position: relative; }
       .a--hero-section-01__cta-container .a--cta:before {
         position: absolute;
-        border-radius: 0.5rem;
+        border-radius: 0;
         top: 0;
         bottom: 0;
         left: 0;
@@ -5007,7 +5007,7 @@ a.new-post-btn {
   .a--heading-plus-text-plus-cta__cta-container {
     margin: 3.5rem 0 0; }
   .a--heading-plus-text-plus-cta .a--cta {
-    background-color: #EC8500;
+    background-color: #00A0E4;
     border: none;
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -5017,11 +5017,11 @@ a.new-post-btn {
     font-style: normal;
     font-weight: 400;
     color: #fff;
-    border-radius: 0.5rem;
+    border-radius: 0;
     position: relative; }
     .a--heading-plus-text-plus-cta .a--cta:before {
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: 0;
       top: 0;
       bottom: 0;
       left: 0;
@@ -6058,7 +6058,7 @@ a.new-post-btn {
       font-family: "Open Sans", sans-serif;
       font-style: normal;
       font-weight: 700;
-      background-color: #EC8500;
+      background-color: #00A0E4;
       padding: 0.3rem 0.8rem;
       border-radius: 1rem;
       font-size: 1.2rem;
@@ -7410,7 +7410,7 @@ div.book-wrapper {
       opacity: 1; }
 
 .a--course-about-01__courseware-btn {
-  background-color: #EC8500;
+  background-color: #00A0E4;
   border: none;
   display: inline-block;
   padding: 1.5rem 2rem;
@@ -7420,11 +7420,11 @@ div.book-wrapper {
   font-style: normal;
   font-weight: 400;
   color: #fff;
-  border-radius: 0.5rem;
+  border-radius: 0;
   position: relative; }
   .a--course-about-01__courseware-btn:before {
     position: absolute;
-    border-radius: 0.5rem;
+    border-radius: 0;
     top: 0;
     bottom: 0;
     left: 0;
@@ -7632,7 +7632,7 @@ div.book-wrapper {
         border-top: none;
         border-left: none;
         border-right: none;
-        border-color: #EC8500; }
+        border-color: #00A0E4; }
     .login-register .form-field textarea {
       background: none;
       border: none;
@@ -7657,7 +7657,7 @@ div.book-wrapper {
         outline: none !important; }
       .login-register .form-field textarea:hover, .login-register .form-field textarea:focus, .login-register .form-field textarea:hover:not(:disabled), .login-register .form-field textarea:focus:not(:disabled) {
         border: 0.1rem solid rgba(44, 42, 47, 0.4);
-        border-color: #EC8500; }
+        border-color: #00A0E4; }
     .login-register .form-field .tip {
       font-size: 1.4rem;
       font-family: "Open Sans", sans-serif;
@@ -7684,7 +7684,7 @@ div.book-wrapper {
     vertical-align: inherit;
     text-shadow: none;
     letter-spacing: 0;
-    background-color: #EC8500;
+    background-color: #00A0E4;
     border: none;
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -7695,7 +7695,7 @@ div.book-wrapper {
     font-style: normal;
     font-weight: 400;
     color: #fff;
-    border-radius: 0.5rem;
+    border-radius: 0;
     position: relative; }
     .login-register .action-primary:hover, .login-register .action-primary:focus, .login-register .action-primary:hover:not(:disabled), .login-register .action-primary:focus:not(:disabled) {
       border: none;
@@ -7705,7 +7705,7 @@ div.book-wrapper {
       outline: none !important; }
     .login-register .action-primary:before {
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: 0;
       top: 0;
       bottom: 0;
       left: 0;
@@ -7719,7 +7719,7 @@ div.book-wrapper {
       background-color: rgba(255, 255, 255, 0.1); }
     .login-register .action-primary:hover, .login-register .action-primary:focus, .login-register .action-primary:hover:not(:disabled), .login-register .action-primary:focus:not(:disabled) {
       color: rgba(255, 255, 255, 0.8);
-      background-color: #EC8500; }
+      background-color: #00A0E4; }
   .login-register .nav-btn {
     background: none;
     border: none;
@@ -7741,7 +7741,7 @@ div.book-wrapper {
     font-style: normal;
     font-weight: 400;
     color: #0072A4;
-    border-radius: 0.5rem;
+    border-radius: 0;
     position: relative;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
@@ -7753,7 +7753,7 @@ div.book-wrapper {
       outline: none !important; }
     .login-register .nav-btn:before {
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: 0;
       top: 0;
       bottom: 0;
       left: 0;
@@ -8152,7 +8152,7 @@ section.sysadmin-dashboard-content {
     vertical-align: inherit;
     text-shadow: none;
     letter-spacing: 0;
-    background-color: #EC8500;
+    background-color: #00A0E4;
     border: none;
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -8163,7 +8163,7 @@ section.sysadmin-dashboard-content {
     font-style: normal;
     font-weight: 400;
     color: #fff;
-    border-radius: 0.5rem;
+    border-radius: 0;
     position: relative;
     max-width: 100%;
     width: auto !important; }
@@ -8175,7 +8175,7 @@ section.sysadmin-dashboard-content {
       outline: none !important; }
     section.sysadmin-dashboard-content button:before {
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: 0;
       top: 0;
       bottom: 0;
       left: 0;
@@ -8189,7 +8189,7 @@ section.sysadmin-dashboard-content {
       background-color: rgba(255, 255, 255, 0.1); }
     section.sysadmin-dashboard-content button:hover, section.sysadmin-dashboard-content button:focus, section.sysadmin-dashboard-content button:hover:not(:disabled), section.sysadmin-dashboard-content button:focus:not(:disabled) {
       color: rgba(255, 255, 255, 0.8);
-      background-color: #EC8500; }
+      background-color: #00A0E4; }
   section.sysadmin-dashboard-content ol li {
     padding: 1.5rem 1rem;
     border-bottom: 0.1rem solid #ddd; }
@@ -8280,7 +8280,7 @@ span#djangopid, span#edxver {
     font-weight: 400;
     margin: 0 0 1.5rem; }
   .a--dashboard-01__promote-catalog a.a--dashboard-01__promote-catalog__cta {
-    background-color: #EC8500;
+    background-color: #00A0E4;
     border: none;
     display: inline-block;
     padding: 1.5rem 2rem;
@@ -8289,11 +8289,11 @@ span#djangopid, span#edxver {
     font-style: normal;
     font-weight: 400;
     color: #fff;
-    border-radius: 0.5rem;
+    border-radius: 0;
     position: relative; }
     .a--dashboard-01__promote-catalog a.a--dashboard-01__promote-catalog__cta:before {
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: 0;
       top: 0;
       bottom: 0;
       left: 0;
@@ -8307,3 +8307,11 @@ span#djangopid, span#edxver {
       background-color: rgba(255, 255, 255, 0.1); }
     .a--dashboard-01__promote-catalog a.a--dashboard-01__promote-catalog__cta:hover, .a--dashboard-01__promote-catalog a.a--dashboard-01__promote-catalog__cta:focus {
       color: rgba(255, 255, 255, 0.8); }
+
+.a--hero-section-01__container h4 {
+  line-height: 1.5;
+  opacity: 1; }
+
+.a--hero-section-01__container .a--cta {
+  background: none;
+  border: 0.2rem solid #fff; }

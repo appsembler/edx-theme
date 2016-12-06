@@ -1,5 +1,6 @@
 $brand-primary-color: #0072A4;
-$brand-accent-color: #EC8500;
+$brand-accent-color: #00A0E4;
+$brand-accent-color-alt: #EC8500;
 $navbar-style: "white";  // brand or white
 $base-text-color: #2C2A2F;
 
@@ -40,7 +41,7 @@ $header-font-size: 1.6rem;
 $header-text-color: calcNavbarTextColor($navbar-style, $base-text-color);
 $navbar-button-border: calcNavbarButtonBorder($navbar-style);
 $navbar-button-bg: calcNavbarButtonBg($navbar-style, $brand-accent-color);
-$navbar-anchor-underline-color: calcNavbarUnderlineColor($navbar-style, $brand-primary-color);
+$navbar-anchor-underline-color: calcNavbarUnderlineColor($navbar-style, #EC8500);
 $navbar-link-hover: "expanding-underline";  // can be "hover-pop", "expanding-underline", "brand-color" or "opacity"
 
 $display-navbar-logo-positive: calcDisplayLogoPositive($navbar-style);
@@ -62,7 +63,7 @@ $slideout-menu-item-padding: 1.4rem;
 
 $base-letter-spacing: 0;
 
-$buttons-border-radius: 0.5rem;
+$buttons-border-radius: 0;
 
 
 $footer-padding-top: 4rem;
