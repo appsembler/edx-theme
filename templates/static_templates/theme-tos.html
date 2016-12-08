@@ -1,0 +1,40 @@
+## mako
+<%!
+  from django.conf import settings
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+%>
+<%inherit file="/main.html" />
+
+<%namespace name='static' file='/static_content.html'/>
+
+<%block name="title"><title>Termos de serviço</title></%block>
+
+<section class="static-container tos">
+
+  <h2>Termos de serviço</h2>
+
+  <p>Todos os direitos aos conteúdos deste website (<a href="http://www.cursodecar.frm.org.br">www.cursodecar.frm.org.br</a>) são reservados à Fundação Roberto Marinho.
+  A reprodução destes conteúdos por outras partes devem ser solicitados e aprovados previamente.
+  Para isso, entre em contato com a equipe do projeto por email: <a href="mailto:florestabilidade@frm.org.br">florestabilidade@frm.org.br</a>.</p>
+
+  <h2 id="honor">Código de Honra</h2>
+
+  <p>"Declaro que todas as respostas aos exercícios deste curso são fruto do meu próprio trabalho e não de terceiros.
+    Caso tenha tido ajuda de alguma espécie, comunicarei o fato à administração do curso.
+    Declaro ainda que não compartilharei minhas respostas aos exercícios com ninguém, a menos que tenha obtido autorização explícita dos administradores do curso para tal."
+    Caso presencie alguma violação a este Código de Honra, pedimos que entre em contato com os administradores do curso através do e-mail: <a href="mailto:florestabilidade@frm.org.br">florestabilidade@frm.org.br</a></p>
+
+
+</section>
+
+<script>
+    $(document).ready(function() {
+        var print_tos = '<input type="button" value="Print Terms of Service" class="print">';
+        $('#content section.tos').prepend(print_tos).append(print_tos);
+        $('#content section.tos input.print').click(function() {
+            window.print();
+            return false;
+        });
+    });
+</script>
