@@ -1,0 +1,25 @@
+<%!
+from django.utils.translation import ugettext as _
+%>
+
+<%page args="search_wrapper_id" />
+
+
+<div class="a--discovery-search-02" id="${search_wrapper_id}" role="search" aria-label="course">
+    <form>
+      <div class="a--discovery-search-02__main">
+        <div class="a--discovery-search-02__main__content">
+          <h2 id="discovery-message"></h2>
+          <span class="result-count"></span>
+        </div>
+      </div>
+      <div class="a--discovery-search-02__expand-area-wrapper">
+        <div class="a--discovery-search-02__expand-area">
+          <input type="text" id="discovery-form" class="discovery-input search-field a--discovery-search-02__input" placeholder="${_('Search for a Course...')}">
+          <button type="submit" class="button postfix discovery-submit search-button a--discovery-search-02__search-button" aria-label="${_('Search')}"><i class="fa fa-search"></i></button>
+        </div>
+        <div id="filter-bar" class="a--discovery-search-02__filters filters hide-phone is-collapsed">
+        </div>
+      </div>
+    </form>
+</div>
