@@ -2,8 +2,6 @@
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
-student_name_parts = context['accomplishment_copy_name'].split(' ')
-student_name = '{}, {}'.format(student_name_parts[-1], ' '.join(student_name_parts[:-1]))
 %>
 
 <header class="header-app">
@@ -29,7 +27,7 @@ student_name = '{}, {}'.format(student_name_parts[-1], ' '.join(student_name_par
             <div class="wrapper-statement-and-signatories">
                 <div class="nyif--certificates__accomplishment-statement">
                     <p class="accomplishment-statement-lead">
-                        <strong class="nyif--certificates__accomplishment-recipient hd-1 emphasized">${student_name | h}</strong>
+                        <strong class="nyif--certificates__accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name | h}</strong>
                         <span class="accomplishment-summary copy copy-lead">for the successful completion of the course</span>
 
                         <span class="accomplishment-course hd-1 emphasized">
