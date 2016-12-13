@@ -8760,9 +8760,9 @@ span#djangopid, span#edxver {
     @media (max-width: 767px) {
       .a--course-tile-01-parent-element li.courses-listing-item, .a--course-tile-01-parent-element li.discovery-course-tile {
         width: 100%; } }
-    .a--course-tile-01-parent-element li.courses-listing-item .nxp--course-tile__title-container, .a--course-tile-01-parent-element li.discovery-course-tile .nxp--course-tile__title-container {
+    .a--course-tile-01-parent-element li.courses-listing-item .metalogix--course-tile__title-container, .a--course-tile-01-parent-element li.discovery-course-tile .metalogix--course-tile__title-container {
       border-bottom: 0.1rem solid rgba(61, 61, 61, 0.1); }
-    .a--course-tile-01-parent-element li.courses-listing-item .nxp--course-tile__wrapper, .a--course-tile-01-parent-element li.discovery-course-tile .nxp--course-tile__wrapper {
+    .a--course-tile-01-parent-element li.courses-listing-item .metalogix--course-tile__wrapper, .a--course-tile-01-parent-element li.discovery-course-tile .metalogix--course-tile__wrapper {
       padding: 0;
       width: 100%; }
 
