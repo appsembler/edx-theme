@@ -1,4 +1,4 @@
-.nxp--course-tile {
+.metalogix--course-tile {
 
   &__wrapper {
     padding: 1.5rem;
@@ -130,14 +130,10 @@
     }
   }
 
-  li.courses-listing-item {
+  li.courses-listing-item, li.discovery-course-tile {
     padding: 1.5rem;
-    width: 25%;
+    width: 33.3%;
     @include display(flex);
-
-    @media(max-width:$screen-md-max) {
-      width: 33.3%;
-    }
 
     @media(max-width:$screen-sm-max) {
       width: 50%;

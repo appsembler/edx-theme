@@ -1,16 +1,16 @@
-<article class="nxp--course-tile__wrapper" aria-label="<%= content.display_name %>">
-  <a href="/courses/<%- course %>/about" class="nxp--course-tile__container">
-    <div class="nxp--course-tile__image" style="background-image: url('<%- image_url %>');">
+<article class="metalogix--course-tile__wrapper" aria-label="<%= content.display_name %>">
+  <a href="/courses/<%- course %>/about" class="metalogix--course-tile__container">
+    <div class="metalogix--course-tile__image" style="background-image: url('<%- image_url %>');">
     </div>
-    <div class="nxp--course-tile__info">
-      <div class="nxp--course-tile__title-container">
-        <p class="nxp--course-tile__code"><%= content.number %></p>
-        <p class="nxp--course-tile__title"><%= content.display_name %></p>
+    <div class="metalogix--course-tile__info">
+      <div class="metalogix--course-tile__title-container">
+        <p class="metalogix--course-tile__code"><%= content.number %></p>
+        <p class="metalogix--course-tile__title"><%= content.display_name %></p>
       </div>
-      <p class="nxp--course-tile__description"><%= content.overview.substr(0,100) %>...</p>
+      <p class="metalogix--course-tile__description"><%= content.overview.substr(0,100) %>...</p>
       <div>
-        <p class="nxp--course-tile__organization"><%= org %></p>
-        <p class="nxp--course-tile__start-date">
+        <p class="metalogix--course-tile__organization"><%= org %></p>
+        <p class="metalogix--course-tile__start-date">
           <%= interpolate(
               gettext("Starts: %(start_date)s"),
               { start_date: start }, true
