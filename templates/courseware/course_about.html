@@ -113,7 +113,7 @@ from openedx.core.lib.courses import course_image_url
 
   ## Translators: This text will be automatically posted to the student's
   ## Twitter account. {url} should appear at the end of the text.
-  tweet_text = _("I just enrolled in {number} {title} through {account}: {url}").format(
+  tweet_text = _("I just enrolled in a brain science course from the Alberta Family Wellness Initiative. It's free: {url}").format(
     number=course.number,
     title=course.display_name_with_default,
     account=microsite.get_value('course_about_twitter_account', settings.PLATFORM_TWITTER_ACCOUNT),
@@ -128,7 +128,7 @@ from openedx.core.lib.courses import course_image_url
 
   email_subject = u"mailto:?subject={subject}&body={body}".format(
     subject=_("Take a course with {platform} online").format(platform=platform_name),
-    body=_("I just enrolled in {number} {title} through {platform} {url}").format(
+    body=_("I have just enrolled in the online course &quot;Brain Story Certification&quot; by the Alberta Family Wellness Initiative. This free course is open to everyone and I thought you might be interested in enrolling too. Visit the Alberta Family Wellness Initiative for course details. {number} {title} through {platform} {url}").format(
     number=course.number,
     title=course.display_name_with_default,
     platform=platform_name,
