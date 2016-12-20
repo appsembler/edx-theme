@@ -109,7 +109,7 @@ document.write('<iframe src="https://5255816.fls.doubleclick.net/activityi;src=5
 
         <div class="col-md-4 col-sm-12 col-xs-12">
           <h2>Career Opportunities</h2>
-          <p>Once you finish a course, you will be able to use your new skills in your current role, or use them to land a new job. <a href="http://aquent.com/find-work/" target="_blank">We can even help with that!</a></p>
+          <p>Once you finish a course, you will be able to use your new skills in your current role, or use them to land a new job. <a href="http://aquent.com/find-work/?utm_source=gymnasium&utm_medium=web&utm_campaign=homepagejobs&utm_content=careeropportunities" target="_blank">We can even help with that!</a></p>
         </div>
       </section>
 
@@ -126,7 +126,7 @@ document.write('<iframe src="https://5255816.fls.doubleclick.net/activityi;src=5
               <ul class="course-list col-md-12">
                 %for idx, course in enumerate(courses):
                   % if course.is_newish:
-                      <li class="course-list-item col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                      <li class="course-list-item col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
                         <%include file="course.html" args="course=course" />
                       </li>
 
@@ -248,7 +248,7 @@ document.write('<iframe src="https://5255816.fls.doubleclick.net/activityi;src=5
               </ul>
 
               <div class="row">
-                <a href="http://aquent.com/find-work/" class="text-center col-md-12 view-all-jobs">
+                <a href="http://aquent.com/find-work/?utm_source=gymnasium&utm_medium=web&utm_campaign=homepagejobs&utm_content=viewall" class="text-center col-md-12 view-all-jobs">
                   View all jobs in <var class="job-location"> Boston</var>
                 </a>
               </div>

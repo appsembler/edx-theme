@@ -17,7 +17,7 @@ Gymnasium.prototype.setBackgroundColorOfElementFromImage = function (element, im
       var context = canvas.getContext('2d');
       context.drawImage(myImg, 0, 0);
 
-      data = context.getImageData(1, 1, 1, 1).data;
+      data = context.getImageData(0, 0, 1, 1).data;
 
       var r = data[0];
       var g = data[1];
@@ -508,18 +508,23 @@ Gymnasium.prototype.LoadJobsForMarket = function(selected_market, limit, page, c
                 "/orderby/AquentJob.postedDate%20desc" +
                 "/limit/" + limit +
                 "/offset/" + page;
+
       $.ajax(
         {
           url: url,
           type: "POST",
           contentType: "application/json",
           dataType: "jsonp",
+          error: function(res, error){
+            console.log("Error loading jobs", error, "\nResponse:", res);
+          }
         });
     }
 
     var displayJobsForGeoLocation = function(position)
     {
       var market = getMarketFromGeoLocation(position);
+      $('#find-jobs-market-name, .job-location').text(market.name);
       queryJobsForMarket(market.id);
     }
 

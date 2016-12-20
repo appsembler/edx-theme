@@ -471,16 +471,23 @@
       margin-top:1em;
     }
 
-		.gym-course a:hover
-		{
-			text-decoration:underline;
-		}
+		.gym-course
+    {
+      background:#444;
+      margin-bottom:-9em;
+      padding-bottom:9em;
+      a:hover
+  		{
+  			text-decoration:underline;
+  		}
+    }
 
 		padding-top:0px;
 
 		.course-list
 		{
 			list-style:none;
+      overflow:hidden;
 		}
 
 		.course-list-item
@@ -511,7 +518,6 @@
 
         h2
   			{
-  				height:4.5em;
           color: $gym-orange;
           text-align: left;
           margin:0;
@@ -615,6 +621,18 @@
           text-decoration: underline;
         }
 
+        .job-market-bakbak /* can't get this to work */
+        {
+          visibility: hidden;
+        }
+        .job-market-bakbak:before /* can't get this to work */
+        {
+            color:$gym-orange;
+            font-size:12pt;
+            font-style:normal;
+            font-weight:bold;
+            content:"Learn More";
+        }
       }
     }
   }

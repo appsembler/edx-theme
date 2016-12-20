@@ -36,11 +36,6 @@ $gym-light-gray: $gym-light-grey;
 $gym-white: #ebebeb;
 
 $gym-textblock-color:rgba(45,45,45,0.70);
-
-
-
-
-
 //End Gym theme colors
 
 //Main Color Variables
@@ -48,11 +43,6 @@ $main-color: #F89720;
 $dark-color: $gym-orange; //#ea281f; //Link Color
 $light-color: #f4e00c; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $bg-color: #f7fe81; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
-
-
-
-
-
 
 //Main BG Color Variables
 $main-bg:  #f22537;
@@ -75,8 +65,6 @@ $white: $gray-1;
 
 $black: #2e2e2e;
 $black-80: #585858;
-
-
 
 //-----------------
 //  Font Assignment
@@ -136,8 +124,6 @@ $black-80: #585858;
 	font-weight: 900;
 	}
 
-
-
 $theme-sans-font: "brandon-grotesque";
 $sans-serif: $theme-sans-font, $sans-serif;
 $body-font-family: $sans-serif;
@@ -145,12 +131,20 @@ $body-font-family: $sans-serif;
 $theme-serif-font: 'Helvetica Neue';
 $serif: $theme-serif-font, $serif;
 
-
 p
 {
 	font: $serif;
 }
 
+body
+{
+	a, 
+	a:link,
+	a:visited
+	{
+		font-family: $theme-sans-font;
+	}
+}
 
 //-----------------
 //  Theme Element Assignments
@@ -222,8 +216,6 @@ $action-primary-active-focused-shadow: none;
 $action-primary-disabled-bg: $gray-75;
 $action-prmary-disabled-fg: $gray-1;
 
-
-
 // actions - secondary
 $action-secondary-bg: $secondary;
 $action-secondary-fg: $gray;
@@ -243,8 +235,6 @@ $action-secondary-active-focused-shadow: none;
 // disabled
 $action-secondary-disabled-bg: $gray-3;
 $action-secondary-disabled-fg: $gray;
-
-//
 
 $border-color-1: $main-bg-60;
 $border-color-2: $main-bg-60;
@@ -418,8 +408,6 @@ body a:focus,
     margin-top: 1em;
 	}
 }
-
-
 
 .right-gutter
 {
@@ -618,7 +606,6 @@ body a:focus,
 
 	}
 
-
 	.navbar-brand
 	{
 		padding:0px;
@@ -815,14 +802,6 @@ section
 	}
 }
 
-
-
-
-
-
-
-
-
 a.gym-button:link, a.gym-button:visited
 {
 	color:white;
@@ -851,6 +830,7 @@ a.gym-button:hover, a.gym-button:link:hover
 
 	a, a:link, a:visited
 	{
+    font-family: brandon-grotesque, "Helvetica Neue", Helvetica, sans-serif;
 		color:white;
 	}
 	a:hover
@@ -1085,7 +1065,6 @@ button:hover:not(:disabled),
   margin-top:-1.2em;
 }
 
-
 .gym-icon
 {
 	width:35px;
@@ -1126,6 +1105,7 @@ html
 	{
 		h1,h2,h3,h4,h5,h6
 		{
+      display:inherit;
 			text-align:left;
 			text-transform:uppercase;
 			font-family:brandon-grotesque;
@@ -1163,7 +1143,6 @@ code, code *
 {
 	font-family: monospace, serif;
 }
-
 
 /* password reset page */
 .view-passwordreset .introduction header
