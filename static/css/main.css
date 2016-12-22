@@ -8313,3 +8313,6 @@ span#djangopid, span#edxver {
 
 .a--hero-section-01__cta-container {
   display: none; }
+
+.a--line-separator:last-child {
+  display: none; }
