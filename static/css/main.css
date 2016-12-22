@@ -8308,10 +8308,8 @@ span#djangopid, span#edxver {
     .a--dashboard-01__promote-catalog a.a--dashboard-01__promote-catalog__cta:hover, .a--dashboard-01__promote-catalog a.a--dashboard-01__promote-catalog__cta:focus {
       color: rgba(255, 255, 255, 0.8); }
 
-.a--hero-section-01__container h4 {
-  line-height: 1.5;
-  opacity: 1; }
+.a--hero-section-01 h1 {
+  margin: 0; }
 
-.a--hero-section-01__container .a--cta {
-  background: none;
-  border: 0.2rem solid #fff; }
+.a--hero-section-01__cta-container {
+  display: none; }

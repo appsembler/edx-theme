@@ -1,11 +1,7 @@
-.a--hero-section-01__container {
-  h4 {
-    line-height: 1.5;
-    opacity: 1;
-  }
+.a--hero-section-01 h1 {
+  margin: 0;
+}
 
-  .a--cta {
-    background: none;
-    border: 0.2rem solid #fff;
-  }
+.a--hero-section-01__cta-container {
+  display: none;
 }
