@@ -1,0 +1,18 @@
+<%namespace file="../main.html" import="stanford_theme_enabled" />
+<%! from django.utils.translation import ugettext as _ %>
+
+Thank you for registering to take a Brain Story course from the Alberta Family Wellness Initiative. 
+
+To complete your registration, please click on the link below. 
+
+
+% if is_secure:
+  https://${ site }/activate/${ key }
+% else:
+  http://${ site }/activate/${ key }
+% endif
+
+Once you have completed the registration, you must enroll in a course to begin learning. Enrollment is free and open to everyone. 
+
+If you did not register to take a course, please disregard this email. You don't need to do anything; you won't receive any further emails from us. Please do not reply to this e-mail. If you require assistance, please contact the Alberta Family Wellness Initiative: http://www.albertafamilywellness.org/contact-us
+

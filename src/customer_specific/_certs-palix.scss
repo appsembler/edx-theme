@@ -1,0 +1,45 @@
+.palix--certificates {
+
+
+	.accomplishment-rendering {		
+    	padding: 7rem 7rem 2rem 7rem;
+    	top: 0rem !important; 
+    	border-top: 0.5rem solid rgb(100,163,146);
+
+		.accomplishment-signatories {
+				display: none;
+		}	    	
+	}
+
+}
+
+
+@media print {
+	
+	.palix--certificates {		
+
+			margin-top: 0 !important;
+
+			.label {
+				border: 0;
+			}
+
+			a:after {
+				content: none;
+			}
+
+			.accomplishment-rendering .wrapper-statement-and-signatories {
+				border-bottom: 0;
+			}
+
+	.accomplishment-rendering {
+		padding-top: 5rem;			
+
+		.accomplishment-type-label {
+			width: 100%;
+		}
+	}
+
+	}
+}
+
