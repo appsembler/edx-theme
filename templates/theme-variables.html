@@ -86,12 +86,12 @@
   <%
     return [
       #['LINK_TEXT', 'LINK_URL', 'LINK_CLASS', 'ADDITIONAL_ATTRIBUTES']
-      ['Example item', '#', '', 'target="_blank"'],
-      ['Help', reverse('help'), '', ''],
-      ['FAQ', marketing_link('FAQ'), '', ''],
-      ['Contact', reverse('contact'), '', ''],
-      ['Conditions of Use', reverse('tos'), '', ''],
-      ['Copyright', marketing_link('copyright'), '', '']
+      ['About Epic', '/about', '', 'target="_blank"'],
+      #['Help', reverse('help'), '', ''],
+      #['FAQ', marketing_link('FAQ'), '', ''],
+      #['Contact', reverse('contact'), '', ''],
+      #['Conditions of Use', reverse('tos'), '', ''],
+      #['Copyright', marketing_link('copyright'), '', '']
     ]
   %>
 </%def>
@@ -103,7 +103,7 @@
   <%
     return {
       'footer_logo' : get_brand_logos()['icon_black'], ## leave as is, defined above. Can be changed to something custom if needed.
-      'footer_copyright_text' : '© 2016 Epic Learning Network. All rights reserved.',  ## leave value empty if you don't want it displayed.
+      'footer_copyright_text' : '© 2017 Epic Learning Network. All rights reserved.',  ## leave value empty if you don't want it displayed.
       'display_edx_disclaimer' : True, ## bool value required
       'edx_disclaimer' : 'edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc.', ## leave value empty if you don't want it displayed.
       'display_poweredby' : True, ## bool value required
@@ -146,7 +146,7 @@
           'static-block', 'static-blocks/_heading-plus-text-plus-cta.html', {
             # template settings
             'heading' : "Business and technical training for today&#8217;s current and aspiring IT industry professionals&hellip;", ## leave value empty if you don't want it displayed.
-            'text' : "<p>Epic Academy is the online learning portal for the Epic Learning Network - a consortium of the leading independent business and technology training companies in the US and Canada. <a href='#'>Click here</a> for a list of Epic Members.</p><p>The Epic Academy library contains online courses created by Epic Members, Epic&#8217;s software vendor partners - including a complete collection of Microsoft official courses - and other industry leading third parties. Epic Academy&#8217;s business and technology training courses are delivered by many of the most experienced instructors in North America. These video based courses - offering both enterprise and individual solutions - deliver training for in-demand job skills in today&#8217;s marketplace. The courses are interactive and include hands-on exercises and labs.</p><p>For information on the available courses and/or packages, please email <a href='mailto:Learning@EpicLearningNetwork.com'>Learning@EpicLearningNetwork.com</a> or contact any <a href='#'>Epic Member</a> directly and ask about Epic Academy.</p>", ## leave value empty if you don't want it displayed.
+            'text' : "<p>Epic Academy is the online learning portal for the Epic Learning Network &mdash; a consortium of the leading independent business and technology training companies in the US and Canada. <a href='#'>Click here</a> for a list of Epic Members.</p><p>The Epic Academy library contains online courses created by Epic Members, Epic&#8217;s software vendor partners &mdash; including a complete collection of Microsoft official courses &mdash; and other industry leading third parties. Epic Academy&#8217;s business and technology training courses are delivered by many of the most experienced instructors in North America. These video based courses &mdash; offering both enterprise and individual solutions &mdash; deliver training for in-demand job skills in today&#8217;s marketplace. The courses are interactive and include hands-on exercises and labs.</p><p>For information on the available courses and/or packages, please email <a href='mailto:Learning@EpicLearningNetwork.com'>Learning@EpicLearningNetwork.com</a> or contact any <a href='#'>Epic Member</a> directly and ask about Epic Academy.</p>", ## leave value empty if you don't want it displayed.
             'cta_link' : "#", ## leave value empty if you don't want a CTA button displayed.
             'cta_link_text' : "Contact Epic now!", ## leave value empty if you don't want a CTA button displayed.
             'optional_classes' : "left", ## can be "centered" to have all text centered, or "negative" if you want white text on solid color background
