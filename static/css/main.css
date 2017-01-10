@@ -8319,3 +8319,6 @@ span#djangopid, span#edxver {
 
 .a--heading-plus-text-plus-cta__cta-container {
   text-align: center; }
+
+.a--line-separator__container:last-of-type {
+  display: none; }

@@ -74,7 +74,7 @@
   <%
     return [
       #['LINK_TEXT', 'LINK_URL', 'LINK_CLASS', 'ADDITIONAL_ATTRIBUTES']
-      ['Menu item 1', '#', '', '']
+      #['Menu item 1', '#', '', '']
     ]
   %>
 </%def>
@@ -146,8 +146,8 @@
           'static-block', 'static-blocks/_heading-plus-text-plus-cta.html', {
             # template settings
             'heading' : "Business and technical training for today&#8217;s current and aspiring IT industry professionals&hellip;", ## leave value empty if you don't want it displayed.
-            'text' : "<p>Epic Academy is the online learning portal for the Epic Learning Network &mdash; a consortium of the leading independent business and technology training companies in the US and Canada. <a href='#'>Click here</a> for a list of Epic Members.</p><p>The Epic Academy library contains online courses created by Epic Members, Epic&#8217;s software vendor partners &mdash; including a complete collection of Microsoft official courses &mdash; and other industry leading third parties. Epic Academy&#8217;s business and technology training courses are delivered by many of the most experienced instructors in North America. These video based courses &mdash; offering both enterprise and individual solutions &mdash; deliver training for in-demand job skills in today&#8217;s marketplace. The courses are interactive and include hands-on exercises and labs.</p><p>For information on the available courses and/or packages, please email <a href='mailto:Learning@EpicLearningNetwork.com'>Learning@EpicLearningNetwork.com</a> or contact any <a href='#'>Epic Member</a> directly and ask about Epic Academy.</p>", ## leave value empty if you don't want it displayed.
-            'cta_link' : "#", ## leave value empty if you don't want a CTA button displayed.
+            'text' : "<p>Epic Academy is the online learning portal for the Epic Learning Network &mdash; a consortium of the leading independent business and technology training companies in the US and Canada. <a href='/about'>Click here</a> for a list of Epic Members.</p><p>The Epic Academy library contains online courses created by Epic Members, Epic&#8217;s software vendor partners &mdash; including a complete collection of Microsoft official courses &mdash; and other industry leading third parties. Epic Academy&#8217;s business and technology training courses are delivered by many of the most experienced instructors in North America. These video based courses &mdash; offering both enterprise and individual solutions &mdash; deliver training for in-demand job skills in today&#8217;s marketplace. The courses are interactive and include hands-on exercises and labs.</p><p>For information on the available courses and/or packages, please email <a href='mailto:Learning@EpicLearningNetwork.com'>Learning@EpicLearningNetwork.com</a> or contact any <a href='/about'>Epic Member</a> directly and ask about Epic Academy.</p>", ## leave value empty if you don't want it displayed.
+            'cta_link' : "/about", ## leave value empty if you don't want a CTA button displayed.
             'cta_link_text' : "Contact Epic now!", ## leave value empty if you don't want a CTA button displayed.
             'optional_classes' : "left", ## can be "centered" to have all text centered, or "negative" if you want white text on solid color background
             'extra_css' : "" ## add custom css to be added inline to the wrapper element
@@ -218,7 +218,7 @@
             'cta_link' : "#", ## leave value empty if you don't want a CTA button displayed.
             'cta_link_text' : "CTA button", ## leave value empty if you don't want a CTA button displayed.
             'optional_classes' : "centered", ## can be "centered" to have all text centered, or "negative" if you want white text on solid color background
-            'extra_css' : "" ## add custom css to be added inline to the wrapper element
+            'extra_css' : "display: none;" ## add custom css to be added inline to the wrapper element
           }
         ]
     ]
