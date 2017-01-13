@@ -108,14 +108,20 @@
 				content: none;
 			}
 
+			.accomplishment-rendering {    
+        		padding: 1rem !important;
+        		margin: 0 !important;
+        	}
+
 			.accomplishment-rendering .wrapper-statement-and-signatories {
 				border-bottom: 0;
 			}
 
 			.accomplishment-type-label.hd-1 {
 				font-size: 1.75rem;
-				margin-bottom: 2rem;
+				margin-bottom: 1.5rem;
 			}
+			
 		}
 
 
