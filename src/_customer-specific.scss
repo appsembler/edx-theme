@@ -1,4 +1,6 @@
 @import "customer_specific/extracare__certs";
+@import "customer_specific/extracare-footer";
+@import "customer_specific/extracare-index-quote";
 
 $extracare-light-green: #A1D068;
 
@@ -10,7 +12,7 @@ $extracare-light-green: #A1D068;
 
   h1 {
     display: inline-block;
-    background-color: $brand-primary-color;
+    background-color: rgba(146,212,0,1);
     padding: 1rem 2rem;
     font-size: 4.2rem;
     margin: 0;
@@ -20,7 +22,15 @@ $extracare-light-green: #A1D068;
     }
   }
 
+  &__container {
+    padding: 0;
+  }
+
   &__cta-container {
     margin: 0;
   }
+}
+
+.a--header-design-01 .a--site-menu__group ul li.a--nav-cta a {
+  color: #fff;
 }

@@ -1,5 +1,5 @@
-$brand-primary-color: #0B55A8;
-$brand-accent-color: #FFC23D;
+$brand-primary-color: #00A88E;
+$brand-accent-color: #FF6634;
 $navbar-style: "white";  // brand or white
 $base-text-color: #424242;
 
@@ -26,11 +26,11 @@ $primary-font-weight-black: 800;
 }
 
 $cta-button-bg: $brand-accent-color;
-$cta-button-text-color: $brand-primary-color;
+$cta-button-text-color: #fff;
 $cta-button-border: none;
 
 $header-bg-color: calcNavbarBg($navbar-style, $brand-primary-color);
-$header-logo-height: 6rem;
+$header-logo-height: 8rem;
 $header-padding-top: 1.5rem;
 $header-padding-bottom: $header-padding-top;
 $header-padding-sm-top: 1.5rem;
@@ -62,7 +62,7 @@ $slideout-menu-item-padding: 1.4rem;
 
 $base-letter-spacing: 0;
 
-$buttons-border-radius: 0.5rem;
+$buttons-border-radius: 0;
 
 
 $footer-padding-top: 4rem;
@@ -75,8 +75,8 @@ $footer-link-hover-color: lighten($footer-text-color, 15%);
 $footer-link-breathe-space: 1.5rem;
 $footer-logo-breathe-space: 3rem;
 $footer-logo-padding-vertical: 1rem;
-$footer-logo-width: 4rem;
-$footer-logo-opacity: 0.5;
+$footer-logo-width: 8rem;
+$footer-logo-opacity: 1;
 $footer-copyright-text-size: 1.2rem;
 $footer-copyright-text-color: lighten($footer-text-color, 5%);
 $footer-copyright-breathe-space: 1rem;
