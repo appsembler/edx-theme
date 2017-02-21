@@ -84,8 +84,6 @@
     return [
       #['LINK_TEXT', 'LINK_URL', 'LINK_CLASS', 'ADDITIONAL_ATTRIBUTES']
       ['Contact', reverse('contact'), '', ''],
-      ['Conditions of Use', reverse('tos'), '', ''],
-      ['Copyright', marketing_link('copyright'), '', '']
     ]
   %>
 </%def>
@@ -97,7 +95,7 @@
   <%
     return {
       'footer_logo' : get_brand_logos()['logo_positive'], ## leave as is, defined above. Can be changed to something custom if needed.
-      'footer_copyright_text' : '© 2016 The ExtraCare Charitable Trust. All rights reserved.',  ## leave value empty if you don't want it displayed.
+      'footer_copyright_text' : '© 2017 The ExtraCare Charitable Trust. All rights reserved.',  ## leave value empty if you don't want it displayed.
       'display_edx_disclaimer' : True, ## bool value required
       'edx_disclaimer' : 'edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc.', ## leave value empty if you don't want it displayed.
       'display_poweredby' : True, ## bool value required
@@ -559,7 +557,38 @@
 
 <%def name="get_honor_content()">
   <%
-    return []
+    return [
+        #[
+        #   'TEMPLATE_TYPE', 'TEMPLATE_URL', {
+        #     'template_setting_01': "value",
+        #     'template_setting_02': "value2",
+        #     ...
+        #   }
+        #]
+        [
+          'static-block', 'static-blocks/_hero-section-01.html', {
+            # template settings
+            'hero_title' : "Honor Code", ## leave value empty if you don't want it displayed.
+            'hero_subtitle' : "", ## leave value empty if you don't want it displayed.
+            'cta_link' : "", ## leave value empty if you don't want a CTA button displayed.
+            'cta_link_text' : "", ## leave value empty if you don't want a CTA button displayed.
+            'popup_video_url' : "", ## YouTube video ID - leave value empty if you don't want a video button and modal displayed.
+            'popup_video_text' : "", ## leave value empty if you don't want a video button and modal displayed.
+            'popup_video_id' : "", ## leave value empty if you don't want a video button and modal displayed.
+            'text_color' : "#fff",
+            'bg_image_url' : '', ## leave empty if you want just a full color background
+            'extra_css' : "" ## add custom css to be added inline to the wrapper element
+          }
+        ],
+        [
+          'static-block', 'static-blocks/_plain-content-01.html', {
+            # template settings
+            'content' : '<ol><li>The ExtraCare Charitable Trust reserve the right to change the content used at any time.</li><li>The ExtraCare Charitable Trust may make improvements, or changes, to this material at any time without prior notification.</li><li>The use of the training material on our courses is restricted to the Registered User who has been supplied with the log in details by a The ExtraCare Charitable Trust as part of an authorised course.</li><li>This training material has been prepared, maintained, updated and distributed by The ExtraCare Charitable Trust.</li><li>The use of the training material on our courses is restricted to the Registered User who has been supplied with the log in details by a The ExtraCare Charitable Trust as part of an authorised course.</li></li>The ExtraCare Charitable Trust does not warrant that the materials will be error free including technical inaccuracies, nor free of viruses, or other harmful matter.</li></ol>', ## block content, place iline HTML here
+            'optional_classes' : "", ##
+            'extra_css' : "" ## add custom css to be added inline to the wrapper element
+          }
+        ]
+    ]
   %>
 </%def>
 
