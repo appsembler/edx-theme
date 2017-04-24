@@ -1,3 +1,11 @@
+**NOTE**
+This is a copy of Aquent's theme before it was upgraded from a Stanford to a Comprehensive theme.
+
+The branch on production is `appsembler/gymnasium`
+
+tjk
+
+
 Overview
 ========
 This directory stores a default theme for an Open edX instance.
