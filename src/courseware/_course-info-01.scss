@@ -15,3 +15,12 @@
     }
   }
 }
+
+.a--course-updates .a--course-info article {
+  padding: 2.5rem 0;
+  border-bottom: 0.1rem solid #ddd;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
