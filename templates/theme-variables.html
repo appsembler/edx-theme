@@ -1,5 +1,6 @@
 ## mako
 <%! from django.core.urlresolvers import reverse %>
+<%! from datetime import datetime %>
 <%namespace name='static' file='/static_content.html'/>
 
 
@@ -104,7 +105,7 @@
   <%
     return {
       'footer_logo' : get_brand_logos()['icon_black'], ## leave as is, defined above. Can be changed to something custom if needed.
-      'footer_copyright_text' : 'Copyright © 2016 Metalogix International GmbH. All rights reserved.',  ## leave value empty if you don't want it displayed.
+      'footer_copyright_text' : 'Copyright ©' + datetime.now().strftime("%Y") + ' Metalogix International GmbH. All rights reserved.',  ## leave value empty if you don't want it displayed.
       'display_edx_disclaimer' : True, ## bool value required
       'edx_disclaimer' : 'edX, Open edX and the edX and Open edX logos are trademarks or registered trademarks of edX Inc.', ## leave value empty if you don't want it displayed.
       'display_poweredby' : True, ## bool value required
