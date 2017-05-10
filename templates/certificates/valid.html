@@ -7,5 +7,12 @@
 
 <%include file="_accomplishment-rendering.html" />
 
+<script language="JavaScript">
+    if (confirm("Press OK to email a link to your certificate to your Location contact.")) {
+        self.location = "mailto:${email_share_to}?subject=${email_share_subj}&body=${email_share_body}";
+    }
+</script>
+
+
 
 

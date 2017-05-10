@@ -81,6 +81,14 @@ from django.template.defaultfilters import escapejs
                     </button>
                     %endif
 
+                    %if email_share_enabled:
+                    <button class="action action-email btn btn-overlay btn-small" id="action-email-view"
+                    onclick='self.location="mailto:${email_share_to}?subject=${email_share_subj}&body=${email_share_body}"; return false;'>
+                        <i class="icon fa fa-envelope" aria-hidden="true"></i>
+                        ${_("Email Certificate Link")}
+                    </button>    
+                    %endif                    
+
                     <button class="action action-print btn btn-overlay btn-small" id="action-print-view">
                         <i class="icon fa fa-print" aria-hidden="true"></i>
                         ${_("Print Certificate")}
