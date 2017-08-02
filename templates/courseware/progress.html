@@ -63,7 +63,7 @@ from django.utils.http import urlquote_plus
               <div class="msg-actions">
                 %if show_cert_web_view and cert_web_view_url:
                 <a class="btn" href="${cert_web_view_url | h}" target="_blank" title="${_('View certificate in a new browser window or tab.')}">
-                  ${_("View Certificate")}
+                  ${_("View and Email Certificate")}
                 </a>
                 %elif download_url:
                 <a class="btn" href="${download_url | h}" target="_blank" title="${_('PDF will open in a new browser window or tab.')}">
