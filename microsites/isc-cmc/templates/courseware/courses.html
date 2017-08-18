@@ -106,7 +106,7 @@
           cgroupshort = category.replace(" ", "").lower()
         %>
         <!-- single courses category -->
-        <a name="${cgroupshort}"/>
+        <a class="courses-list__category__wrapper" name="${cgroupshort}"/>
         <div class="row courses-list__row courses-list__category">
 
           <!-- single category header with category name -->
@@ -118,11 +118,11 @@
           <!-- end of category header -->
 
           %if category.lower() == 'cmc system training':
-            <% 
+            <%
             # move CMC000 to end of category
             cat_courses = cat_courses + [cat_courses.pop(0)]
             %>
-          %endif 
+          %endif
 
           %for course in cat_courses:
           <!-- single course tile template -->

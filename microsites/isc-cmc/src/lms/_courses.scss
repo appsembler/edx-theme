@@ -3,9 +3,16 @@
 	&__category {
 		margin-bottom: 30px;
 		border-bottom: 1px solid #dedede;
+		@include display(flex);
+		@include flex-wrap(wrap);
 
 		&:last-child {
 			border-bottom: none;
+		}
+
+		&__wrapper {
+			width: 100%;
+			@include flex-shrink(0);
 		}
 
 
