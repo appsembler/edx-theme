@@ -13,14 +13,5 @@
 		<script language="JavaScript">
 		    alert("${email_share_warn}");
 		</script>
-	% else:	
-		<script language="JavaScript">
-		    if (confirm("Press OK to email a link to your certificate to your Location contact. If you have enabled a pop-up blocker you may need to click 'Email Certificate Link' on the next page.")) {
-		        window.open("mailto:${email_share_to}?subject=${email_share_subj}&body=${email_share_body}");
-		    }
-		</script>
 	% endif
 % endif
-
-
-
