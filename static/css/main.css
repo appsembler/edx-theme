@@ -8623,13 +8623,13 @@ span#djangopid, span#edxver {
     font-weight: 300; }
 
 .a--hero-section-01 {
-  border-top: 0.8rem solid #A1D068;
-  border-bottom: 0.4rem solid #A1D068;
+  border-top: 0.8rem solid #a1d068;
+  border-bottom: 0.4rem solid #a1d068;
   min-height: 14rem;
   padding: 10rem 2rem; }
   .a--hero-section-01 h1 {
     display: inline-block;
-    background-color: #92d400;
+    background-color: #a1d068;
     padding: 1rem 2rem;
     font-size: 4.2rem;
     margin: 0; }

@@ -2,7 +2,7 @@
 @import "customer_specific/extracare-footer";
 @import "customer_specific/extracare-index-quote";
 
-$extracare-light-green: #A1D068;
+$extracare-light-green: #a1d068;
 
 .a--hero-section-01 {
   border-top: 0.8rem solid $extracare-light-green;
@@ -12,7 +12,7 @@ $extracare-light-green: #A1D068;
 
   h1 {
     display: inline-block;
-    background-color: rgba(146,212,0,1);
+    background-color: $extracare-light-green;
     padding: 1rem 2rem;
     font-size: 4.2rem;
     margin: 0;
