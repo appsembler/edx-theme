@@ -8,6 +8,7 @@ from django.template.defaultfilters import escapejs
   <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
   <script type="text/javascript" src="${static.url('themes/extracare-dogwood/js/email_cert.js')}"></script>
   <script type="text/javascript">
+      var m = new mandrill.Mandrill("${settings.MANDRILL_API_KEY}");
       var subject = decodeURIComponent("${email_share_subj}");
       var body = decodeURIComponent("${email_share_body}");
       var to = decodeURIComponent("${email_share_to}");

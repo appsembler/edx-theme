@@ -1,14 +1,12 @@
 function log(obj) {
     response = JSON.stringify(obj);
-    if (response.search("sent")){
+    if (response.search("sent")  && ! response.search("reject_reason")){
       alert("Email sent successfully")
     }
     else {
-      alert("There was an issue please contact administrator")
+      alert("There was an issue please contact technical+extracare@appsembler.com")
     }
 }
-
-var m = new mandrill.Mandrill('866XzPk_1F35JMmBF8MN_Q');
 
 function sendTheMail() {
     m.messages.send(params, function(res) {
