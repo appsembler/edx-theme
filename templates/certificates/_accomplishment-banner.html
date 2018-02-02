@@ -6,6 +6,8 @@ from django.conf import settings %>
 <%namespace name='static' file='../static_content.html'/>
 <%block name="js_extra">
   <%static:js group='certificates_wv'/>
+  <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+  <script type="text/javascript" src="${static.url('themes/extracare-dogwood/js/email_cert.js')}"></script>
   <script type="text/javascript">
       $(document).ready(function() {
           FaceBook.init({"facebook_app_id": '${facebook_app_id}'});
