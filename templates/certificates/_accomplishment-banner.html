@@ -1,10 +1,13 @@
 <%!
 from django.utils.translation import ugettext as _
 from django.template.defaultfilters import escapejs
-%>
+from django.conf import settings %>
+
 <%namespace name='static' file='../static_content.html'/>
 <%block name="js_extra">
   <%static:js group='certificates_wv'/>
+  <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
+  <script type="text/javascript" src="${static.url('themes/extracare-dogwood/js/email_cert.js')}"></script>
   <script type="text/javascript">
       $(document).ready(function() {
           FaceBook.init({"facebook_app_id": '${facebook_app_id}'});
@@ -34,6 +37,19 @@ from django.template.defaultfilters import escapejs
           var top = (screen.height/2)-(height/2);
           return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width='+width+', height='+height+', top='+top+', left='+left);
       }
+
+      var m = new mandrill.Mandrill("${settings.MANDRILL_API_KEY}");
+      var subject = decodeURIComponent("${email_share_subj}");
+      var body = decodeURIComponent("${email_share_body}");
+      var to = decodeURIComponent("${email_share_to}");
+      var params = {
+          "message": {
+              "from_email":"training.team@extracare.org.uk",
+              "to":to,
+              "subject": subject,
+              "text": body
+          }
+      };
   </script>
 </%block>
 <div id="fb-root"></div>
@@ -83,11 +99,11 @@ from django.template.defaultfilters import escapejs
 
                     %if email_share_enabled:
                     <button class="action action-email btn btn-overlay btn-small" id="action-email-view"
-                    onclick='self.location="mailto:${email_share_to}?subject=${email_share_subj}&body=${email_share_body}"; return false;'>
+                    onclick='sendTheMail(); return false;'>
                         <i class="icon fa fa-envelope" aria-hidden="true"></i>
                         ${_("Email Certificate Link")}
-                    </button>    
-                    %endif                    
+                    </button>
+                    %endif
 
                     <button class="action action-print btn btn-overlay btn-small" id="action-print-view">
                         <i class="icon fa fa-print" aria-hidden="true"></i>
