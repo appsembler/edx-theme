@@ -1,6 +1,6 @@
 function log(obj) {
     response = JSON.stringify(obj);
-    if (response.search("sent")  && ! response.search("reject_reason")){
+    if (response.search("sent")  && response.search('"reject_reason":null')){
       alert("Email sent successfully")
     }
     else {
