@@ -45,7 +45,7 @@ from django.conf import settings %>
       var params = {
           "message": {
               "from_email":"training.team@extracare.org.uk",
-              "to":to,
+              "to":[{"email":to}],
               "subject": subject,
               "text": body
           }
