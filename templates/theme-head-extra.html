@@ -2,12 +2,6 @@
 
 <%namespace name='static' file='/static_content.html'/>
 
-<%! from datetime import datetime %>
-<% 
-now = datetime.now()
-show_sitewide_alert = now > datetime(2016, 1, 30, 15, 0, 0, 0) and now < datetime(2016, 1, 30, 18, 0, 0, 0)
-%>
-
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 <%block name="js_extra">
