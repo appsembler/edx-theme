@@ -11,4 +11,6 @@ deployment:
   staging:
     branch: [develop,/feature.*/]
     commands:
-      - deactivate && ~/edx-theme/deploy/deploy_staging.sh
+      - deactivate && ~/edx-theme/deploy/deploy_staging.sh:
+          timeout: 1200 #increase timeout from 10 to 20 mins
+
