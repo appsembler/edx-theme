@@ -45,3 +45,13 @@ span {
 .passwordreset a:link {
 	color: $brand-primary-color;
 }
+
+
+// courseware page
+
+/* normally set on style attr via JS 
+   but it isn't working in IE9
+*/   
+#courseware-search-results {
+  display: none;
+}
