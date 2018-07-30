@@ -21,6 +21,12 @@ from django.conf import settings
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
 
+<!-- iframe resize script for responsive job modules-->
+<script 
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.6.0/iframeResizer.js"></script>
+
+
 <script src="${static.url('js/prism.js')}"> </script>
 <script src="${static.url('js/cookiebanner.js')}" id="cookiebanner"
 	data-link="#f89820"
@@ -42,6 +48,8 @@ from django.conf import settings
   // is in use
 
   $(function(){
+    iFrameResize({ log:false }, '.gymnasium-resizable-iframe');
+  
     // This function returns Internet Explorer's major version number,
     // or 0 for others. It works by finding the "MSIE " string and
     // extracting the version number following the space, up to the decimal

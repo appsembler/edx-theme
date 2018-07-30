@@ -1,118 +1,35 @@
-<article id="find-work">
-  <form method="get" id="find-work-search" class="">
-    <div class="field select row" id="field-market">
-      <label class="visuallyhidden" id="choose-location" for="market">Select the Nearest Location</label>
-      <div class="">
-        <select id="market" name="market" class="form-control" required="" aria-required="true">
-              <option disabled="">Select A Location:</option>
-              <option disabled="">——————</option>
-            <optgroup label="USA">
-              <option value="23">Atlanta</option>
-              <option value="60">Austin</option>
-              <option value="46">Baltimore</option>
-              <option value="102">Boise</option>
-              <option value="10" selected="">Boston</option>
-              <option value="61">Charlotte</option>
-              <option value="14">Chicago</option>
-              <option value="34">Connecticut</option>
-              <option value="22">Dallas</option>
-              <option value="27">Denver</option>
-              <option value="24">Detroit</option>
-              <option value="826">Houston</option>
-              <option value="58">Indianapolis</option>
-              <option value="13">Los Angeles</option>
-              <option value="33">Miami</option>
-              <option value="20">Minneapolis</option>
-              <option value="807">Moline</option>
-              <option value="30">New Jersey</option>
-              <option value="11">New York City</option>
-              <option value="51">Northern Virginia</option>
-              <option value="32">Ohio</option>
-              <option value="19">Orange County</option>
-              <option value="72">Orlando</option>
-              <option value="18">Philadelphia</option>
-              <option value="31">Phoenix</option>
-              <option value="41">Portland, OR</option>
-              <option value="803">Raleigh/Durham</option>
-              <option value="73">Rhode Island</option>
-              <option value="78">Richmond</option>
-              <option value="16">San Diego</option>
-              <option value="12">San Francisco</option>
-              <option value="17">Seattle</option>
-              <option value="15">Silicon Valley</option>
-              <option value="37">St. Louis</option>
-              <option value="68">Tampa</option>
-              <option value="25">Washington, DC</option>
-              <option value="881">Wisconsin</option>
-            </optgroup>
-              <option disabled="">——————</option>
-            <optgroup label="Canada">
-              <option value="40">Toronto</option>
-              <option value="47">Vancouver</option>
-            </optgroup>
-              <option disabled="">——————</option>
-            <optgroup label="France">
-              <option value="35">Paris</option>
-            </optgroup>
-              <option disabled="">——————</option>
-            <optgroup label="UK">
-              <option value="29">London</option>
-            </optgroup>
-              <option disabled="">——————</option>
-            <optgroup label="Netherlands">
-              <option value="43">Amsterdam</option>
-            </optgroup>
-              <option disabled="">——————</option>
-            <optgroup label="Australia">
-              <option value="36">Melbourne</option>
-              <option value="39">Sydney</option>
-            </optgroup>
-              <option disabled="">——————</option>
-            <optgroup label="Japan">
-              <option value="92">Fukuoka</option>
-              <option value="79">Nagoya</option>
-              <option value="64">Osaka</option>
-              <option value="44">Tokyo</option>
-            </optgroup>
-        </select>
-      </div>
-      <button class="gym-button" id="view-jobs-button"><b>View Jobs</b></button>
-    </div>
-    <section class="job-board">
-      <h3 class="viewing-jobs-in">Viewing jobs in <var class="job-location"> <var id="find-jobs-market-name"></var></var>…</h3>
+% if settings.APPSEMBLER_FEATURES['JOBS_MODULE_BASE_URL']:
+    <%
+      market = None
+      if user.is_authenticated():
+        # grab market from user profile
+        market = user.profile.market
+      endif
+    %>
+  
+  <iframe src="${settings.APPSEMBLER_FEATURES['JOBS_MODULE_BASE_URL']}/${market}"
+    id="jobs-microservice-frame"
+    class="gymnasium-resizable-iframe gymnasium-jobs-microservice-iframe"
+    style="width: 1px;min-width: 100%;border:0;"
+  ></iframe>
+  
+  % if not user.is_authenticated():
+    <script>
+      if (navigator.geolocation) {
+        // Geolocation is enabled - use this to get location
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            if (latitude && longitude) {
+              const baseUrl = "${settings.APPSEMBLER_FEATURES['JOBS_MODULE_BASE_URL']}";
+              const microserviceUrl = baseUrl + "/" + latitude + "/" + longitude;
 
-      <div class="job-list-container">
-        <ul class="job-list" id="find-jobs-job-list">
-          <li class="row">
-            <li class="row loading-find-work"><b>Finding Work…</b></li>
-          </li>
-        </ul>
-
-        <div class="row">
-          <div class="">
-            <a href="http://aquent.com/find-work/?utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=homepagejobs&amp;utm_content=viewall" class="view-all-jobs">
-              View all jobs in <var class="job-location">…</var> →
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-  </form>
-</article>
-
-<script>
-  $(function(){
-    //load jobs into the jobs page
-    Gymnasium.LoadJobsForMarket();
-
-    $('#view-jobs-button').click(function(event){
-      event.preventDefault();
-      var market = $('#market').val();
-      var market_label = $('#market option:selected').text();
-
-      Gymnasium.LoadJobsForMarket(market);
-      $('#find-jobs-market-name, .job-location').text(market_label);
-    });
-  });
-</script>
+              $('.gymnasium-jobs-microservice-iframe').attr('src', microserviceUrl);
+            }
+          },
+        );
+      }
+    </script>
+  % endif
+% endif

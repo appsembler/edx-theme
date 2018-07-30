@@ -3,7 +3,7 @@
   from django.utils.translation import ugettext as _
   from openedx.core.djangolib.js_utils import dump_js_escaped_json
 %>
-<% import urllib2 %>
+<%namespace name="gymcms" file="../util/gymcms.mako" />
 <%inherit file="../main.html" />
 <%
   course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
@@ -77,7 +77,6 @@
           </ul>
 
           <h1 id="gymshorts">Gym Shorts</h1>
-          <p><strong>NEW: Gym Shorts now include badges! (Hello, bragging rights.) <a href="https://thegymnasium.com/faq#how-do-i-get-my-badge">Learn More</a></strong></p>
           <p class="hero">
             Gym Shorts are short courses that all last under an hour. Like our Full Courses, they are taught by industry experts and focus on current skills and technologies. Each includes approximately one hour of video instruction, a final exam, and a badge (if and) when you pass.
           </p>
@@ -89,8 +88,8 @@
       <div class="col-md-3 sidebar">
         <%include file='../jobs/find_jobs.html' />
 
-        ## include sidebar content from git repo
-        ${_(urllib2.urlopen('https://gymnasium.github.io/static-site-content/upcoming-courses.html').read())}
+        ## include sidebar content from cms
+        ${gymcms.render('upcoming-courses')}
       </div>
     </div> 
   </main>

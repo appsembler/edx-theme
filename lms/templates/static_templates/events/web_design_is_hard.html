@@ -1,0 +1,24 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../../main.html" />
+<%namespace name="gymcms" file="../../util/gymcms.mako" />
+
+<%block name="pagetitle">${_("Web Design is Hard")}</%block>
+
+<div class="container ">
+	<div class="row">
+		<div class="col-md-12 ">
+      <div class="white-panel">
+        <div class="row">
+          <div class="col-md-9">
+            ${gymcms.render('events/web_design_is_hard')}
+          </div>
+
+          <div class="col-md-3">
+            <%include file="../theme-upcoming-content.html" />
+          </div>
+
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
